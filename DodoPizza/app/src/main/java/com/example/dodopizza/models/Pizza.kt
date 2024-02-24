@@ -4,10 +4,10 @@ import java.util.UUID
 
 data class Pizza(
     val id: String = UUID.randomUUID().toString(),
-    val title: String,
-    val description: String,
-    val image: Int,
-    val cost: String,
-    val shortDescription: String,
-    val costSecond: String
-)
+    override val title: String,
+    override val description: String,
+    override val image: Int,
+    override val cost: String,
+    override val shortDescription: String,
+    override val costSecond: String
+):PizzaItem

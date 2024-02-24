@@ -3,7 +3,7 @@ package com.example.dodopizza.models
 import com.example.dodopizza.R
 
 object PizzaSource {
-    val pizzaList = arrayListOf<Pizza>(
+    val pizzaList = arrayListOf<PizzaItem>(
         Pizza(
             title = "Cheesy",
             description = "Mozzarella cheese, cheddar cheese, parmesan cheese, Alfredo sauce",
@@ -51,6 +51,14 @@ object PizzaSource {
             cost = "from 2 900 ₸",
             shortDescription = "Medium 30cm, traditional dough, 680g",
             costSecond = "TO CART FOR 2 900 ₸"
+        ),
+        Pizza(
+            title = "Cheesy",
+            description = "Mozzarella cheese, cheddar cheese, parmesan cheese, Alfredo sauce",
+            image = R.drawable.cheeze,
+            cost = "from 1 900 ₸",
+            shortDescription = "Medium 30cm, traditional dough, 580g",
+            costSecond = "TO CART FOR 1 900 ₸"
         )
     )
 

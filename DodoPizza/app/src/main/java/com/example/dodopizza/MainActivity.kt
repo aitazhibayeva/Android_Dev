@@ -9,7 +9,7 @@ import android.widget.EditText
 import com.example.dodopizza.adapter.PizzaAdapter
 import com.example.dodopizza.databinding.ActivityMainBinding
 import com.example.dodopizza.models.Pizza
-import com.example.dodopizza.models.PizzaDataSource
+import com.example.dodopizza.models.PizzaSource
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.recyclerView.adapter = adapter
 
-        adapter.setData(PizzaDataSource.pizzaList)
+        adapter.setData(PizzaSource.pizzaList)
 
         val editTextSearch = findViewById<EditText>(R.id.search_bar)
         editTextSearch.addTextChangedListener(object : TextWatcher {

@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.example.dodopizza.databinding.ActivitySecondBinding
 import com.example.dodopizza.models.Pizza
-import com.example.dodopizza.models.PizzaDataSource
+import com.example.dodopizza.models.PizzaSource
 
 class SecondActivity : AppCompatActivity() {
 
@@ -45,7 +45,7 @@ class SecondActivity : AppCompatActivity() {
         pizzaDescription = findViewById((R.id.pizza_description))
         buttonCost = findViewById(R.id.cost)
 
-        val pizza = PizzaDataSource.pizzaList.find { it.title == result }
+        val pizza = PizzaSource.pizzaList.find { it.title == result }
 
         pizza?.let {
             pizzaTitle.text = it.title

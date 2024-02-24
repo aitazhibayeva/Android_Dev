@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dodopizza.databinding.PizzaListBinding
 import com.example.dodopizza.models.Pizza
-import com.example.dodopizza.models.PizzaDataSource
+import com.example.dodopizza.models.PizzaSource
 
 class PizzaAdapter(
     private val onPizzaClick: (Pizza) -> Unit
@@ -20,9 +20,9 @@ class PizzaAdapter(
     }
     fun filter(query: String) {
         val filteredList = if (query.isEmpty()) {
-            PizzaDataSource.pizzaList}
+            PizzaSource.pizzaList}
         else {
-            PizzaDataSource.pizzaList.filter {
+            PizzaSource.pizzaList.filter {
                 it.title.contains(query, ignoreCase = true)
             }
         }

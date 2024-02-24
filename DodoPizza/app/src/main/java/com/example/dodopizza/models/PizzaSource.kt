@@ -2,7 +2,7 @@ package com.example.dodopizza.models
 
 import com.example.dodopizza.R
 
-object PizzaDataSource {
+object PizzaSource {
     val pizzaList = arrayListOf<Pizza>(
         Pizza(
             title = "Cheesy",

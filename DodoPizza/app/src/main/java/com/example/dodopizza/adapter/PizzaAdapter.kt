@@ -3,8 +3,9 @@ package com.example.dodopizza.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.dodopizza.databinding.ItemPizzaBinding
+import com.example.dodopizza.databinding.PizzaListBinding
 import com.example.dodopizza.models.Pizza
+import com.example.dodopizza.models.PizzaDataSource
 
 class PizzaAdapter(
     private val onPizzaClick: (Pizza) -> Unit
@@ -17,8 +18,19 @@ class PizzaAdapter(
         pizzaList.addAll(pizzas)
         notifyDataSetChanged()
     }
+    fun filter(query: String) {
+        val filteredList = if (query.isEmpty()) {
+            PizzaDataSource.pizzaList}
+        else {
+            PizzaDataSource.pizzaList.filter {
+                it.title.contains(query, ignoreCase = true)
+            }
+        }
+        setData(ArrayList(filteredList))
+    }
+
     inner class ViewHolder(
-        private val binding: ItemPizzaBinding
+        private val binding: PizzaListBinding
     ):RecyclerView.ViewHolder(binding.root){
         fun bind(pizza: Pizza){
             with(binding){
@@ -36,11 +48,12 @@ class PizzaAdapter(
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
-            ItemPizzaBinding.inflate(
+            PizzaListBinding.inflate(
                 LayoutInflater.from(parent.context),parent,false
             )
         )
     }
+
 
     override fun getItemCount() = pizzaList.size
 

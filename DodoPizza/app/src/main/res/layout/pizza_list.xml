@@ -9,11 +9,11 @@
     <ImageView
         android:id="@+id/pizza_image"
         android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_height="160dp"
         tools:srcCompat = "@drawable/baseline_local_pizza" />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="160dp"
         android:orientation="vertical"
         android:textAlignment="center"
 
@@ -51,7 +51,7 @@
             android:textSize="16sp"
             android:fontFamily="sans-serif-medium"
             android:textStyle="bold"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
             android:layout_marginLeft="5dp"
             tools:text="2 900 ₸" />
 

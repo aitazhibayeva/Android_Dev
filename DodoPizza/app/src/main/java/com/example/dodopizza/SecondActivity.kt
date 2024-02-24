@@ -35,7 +35,7 @@ class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySecondBinding.inflate(layoutInflater)
-        setContentView(R.layout.pizza_info)
+        setContentView(R.layout.activity_second)
 
         val result = intent.getStringExtra(KEY_RESULT)
 
@@ -114,6 +114,20 @@ class SecondActivity : AppCompatActivity() {
             }
         }
 
+        buttonTraditional.setOnClickListener{
+            if (buttonTraditional.backgroundTintList == ContextCompat.getColorStateList(this, R.color.gray)){
+                buttonTraditional.backgroundTintList = ContextCompat.getColorStateList(this, R.color.white)
+                buttonThin.backgroundTintList = ContextCompat.getColorStateList(this,R.color.gray)
+            }
+        }
+        buttonThin.setOnClickListener{
+            if (buttonThin.backgroundTintList == ContextCompat.getColorStateList(this,R.color.white)){
+                buttonThin.backgroundTintList = ContextCompat.getColorStateList(this,R.color.gray)
+            }
+            else if (buttonThin.backgroundTintList == ContextCompat.getColorStateList(this,R.color.gray)){
+                buttonThin.backgroundTintList = ContextCompat.getColorStateList(this,R.color.white)
+            }
+        }
 
     }
     fun goBack(view: View) {

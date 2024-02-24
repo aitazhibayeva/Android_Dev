@@ -22,7 +22,7 @@ object PizzaDataSource {
         ),
         Pizza(
             title = "Carbonara",
-            description = "Chicken ham, cheddar and parmesan cheeses, tomatoes, red onion, mozzarella, alfredo sauce, garlic and Italian herbs",
+            description = "Chicken ham, cheddar and parmesan cheeses, tomatoes, red onion, mozzarella, alfredo sauce",
             image = R.drawable.carbonara,
             cost = "from 2 400 ₸",
             shortDescription = "Medium 30cm, traditional dough, 580g",
@@ -38,7 +38,7 @@ object PizzaDataSource {
         ),
         Pizza(
             title = "Bavarian",
-            description = "Spicy chorizo sausages, pickled cucumbers, red onions, tomatoes, mustard sauce, mozzarella, signature tomato sauce",
+            description = "Spicy chorizo sausages, pickled cucumbers, red onions, tomatoes, mustard sauce, mozzarella",
             image = R.drawable.bavarian,
             cost = "from 2 700 ₸",
             shortDescription = "Medium 30cm, traditional dough, 550g",
@@ -53,6 +53,5 @@ object PizzaDataSource {
             costSecond = "TO CART FOR 2 900 ₸"
         )
     )
-
 
 }

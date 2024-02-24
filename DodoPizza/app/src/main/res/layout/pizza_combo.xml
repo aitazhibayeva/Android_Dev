@@ -11,7 +11,7 @@
         android:layout_height="250dp"
         android:layout_marginTop="25dp"
         android:layout_gravity="center_horizontal"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat = "@drawable/baseline_local_pizza" />
 
     <TextView
         android:id="@+id/product_banner"
@@ -22,7 +22,7 @@
         android:layout_marginEnd="20dp"
         android:textSize="35sp"
         android:textStyle="bold"
-        tools:text="Banner Name" />
+        tools:text="Pizza Name" />
 
     <TextView
         android:id="@+id/banner_size"
@@ -41,6 +41,6 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:textSize="15sp"
-        tools:text="Banner Description" />
+        tools:text="Pizza Description" />
 
 </LinearLayout>
